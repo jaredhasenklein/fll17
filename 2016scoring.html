@@ -48,6 +48,11 @@
 				position: absolute;
 				width: 1px;
 			}
+			
+		p  {
+   				 color: white;
+			}
+		
 		</style>
 	
 	</head>
@@ -84,55 +89,21 @@
             </ul>
         </nav>
 				<!-- CONTENT GOES HERE -->
-				<h1>Conditionally toggling visibility of form fields with Pure CSS(3)</h1>
-<p>I was looking for a pure CSS way to hide/show some form elements based on their value.  Turns out it's pretty easy for checkboxes and radios. Basic example:</p>
 		<form action="">
 			<fieldset>
 				<ol>
 					<li>
-						<input type="checkbox" id="requirement" class="control">
-						<label for="requirement">Check me</label>
+						<input type="radio" name="m01" value="Target 1" id="t1">
+						<label for="t1">Target 1</label>
+					</li>
+					<li>
+						<input type="radio" name="m01" value="Target 2" id="t2">
+						<label for="immigrant">Target 2</label>
 						<fieldset class="conditional">
 							<ol>
 								<li>
-									<label for="option">Related subfield</label>
-									<input type="text" id="option">
-								</li>
-							</ol>
-						</fieldset>
-					</li>
-					<li>
-						<input type="radio" id="radio" class="control">
-						<label for="radio">Radio</label>
-						<fieldset class="conditional">
-							<ol>
-								<li>
-									<label for="option">Related subfield</label>
-									<input type="text" id="option">
-								</li>
-							</ol>
-						</fieldset>
-					</li>
-				</ol>
-			</fieldset>
-		</form>
-            <p>In the above example, I use the class .control to indicate which fields are the control and .conditional to indicate what will be displayed when the control is checked.  I use sibling selectors (<code>~</code>) to tie the conditional to the control</p>
-		<p>You can get creative with IDs to show fields based on certain values only:</p>
-		<form action="">
-			<fieldset>
-				<ol>
-					<li>
-						<input type="radio" name="residency" value="Citizen" id="citizen">
-						<label for="citizen">Citizen</label>
-					</li>
-					<li>
-						<input type="radio" name="residency" value="Immigrant" id="immigrant">
-						<label for="immigrant">Immigrant</label>
-						<fieldset class="conditional">
-							<ol>
-								<li>
-									<label for="country_citizenship">Country of Citizenship</label>
-									<input type="text" id="country_citizenship">
+									<label for="m01b">The shark is only touching the floor</label>
+									<input type="checkbox" id="m01b">
 								</li>
 								<li>
 									<label for="visa_type">Type of Visa</label>
