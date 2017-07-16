@@ -64,9 +64,49 @@
 											  <p>In 3-2-1 LEGO!</p>
 								</header>
 											  <center><img src="images/pic06.jpg" width="33%" alt="" /></center>
-								<p><strong><a href="https://drive.google.com/uc?export=download&amp;confirm=6v3J&amp;id=0B7KVTj--N5d4cmgyYWtOeW9ldjQ">Download for offline
+								
+								
+	<p><strong><a href="https://drive.google.com/uc?export=download&amp;confirm=6v3J&amp;id=0B7KVTj--N5d4cmgyYWtOeW9ldjQ">Download for offline
 </a></strong>
 <br>
+
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="https://drive.google.com/uc?export=download&id=0B9Sjc_ZFlfrZNlo1OGRZNzdyVVk" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML5 video.
+  </video>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
+
+		
 <iframe width="640" height="360" src="https://www.youtube.com/embed/q5NDO4p7vYw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 						</div>
 					</div>
