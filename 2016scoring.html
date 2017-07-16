@@ -22,133 +22,71 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	
-	<style>
-		.control:checked ~ .conditional,
-			#immigrant:checked ~ .conditional,
-			#required-2:checked ~ .conditional
-			#option-2:checked ~ .conditional {
-				clip: auto;
-				height: auto;
-				margin: 0;
-				overflow: visible;
-				position: static;
-				width: auto;
-			}
+				<script>
+		$('.form-div2, .form-div3, .form-div4, .form-div5').show();
+		$('.form-div42').hide();
 
-			.control:not(:checked) ~ .conditional,
-			#immigrant:not(:checked) ~ .conditional,
-			#required-2:not(:checked) ~ .conditional,
-			#option-2:not(:checked) ~ .conditional {
-				border: 0;
-				clip: rect(0 0 0 0);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-			
-		p  {
-   				 color: white;
-			}
-		
+		$('#user').change(function () {
+   		 var selected = $('#user option:selected').text();
+    		$('.form-div2, .form-div3').toggle(selected == "I'm a first-time user");
+		});
+
+		$('#product').change(function () {
+   		 var selected = $('#product option:selected').text();
+    		$('.form-div42').toggle(selected == "Other");
+
+								});
+		</script>
+		<style>
+		div.form-div1, div.form-div2, div.form-div3, div.form-div4, div.form-div42 div.form-div1 > label, div.form-div2 > label, div.form-div3 > label, div.form-div4 > label, div.form-div42 > label, div.form-div5 > label {
+   		 margin-bottom: 15px;
+   		 color: #000;
+				}
 		</style>
-	
+		
 	</head>
-	<body class="is-loading">
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">HYDRODYNAMICS RESOURCES - THE MILKENKNIGHTS</a>
-					</header>
-    <!-- Nav -->
-	 <nav id="nav">
-            <ul class="links">
-                <li class="active"><a href="index.html">Home</a>
-                </li>
-                <li><a href="index.html#footer">Help</a>
-                </li>
-                <li><a href="announcements.html">Announcements</a>
-                </li>
-            </ul>
-            <ul class="icons">
-                <li><a href="https://twitter.com/milkenknights" class="icon fa-twitter"><span class="label">Twitter</span></a>
-                </li>
-                <li><a href="https://www.facebook.com/TheMilkenKnights/" class="icon fa-facebook"><span class="label">Facebook</span></a>
-                </li>
-                <li><a href="https://www.instagram.com/milkenknights/" class="icon fa-instagram"><span class="label">Instagram</span></a>
-                </li>
-                <li><a href="https://github.com/jaredhasenklein/fll17" class="icon fa-github"><span class="label">GitHub</span></a>
-                </li>
-                <li><a href="https://snapchat.com/add/milkenknights" class="icon fa-snapchat"><span class="label">GitHub</span></a>
-                </li>
-                <li><a href="mailto:jhasenklein@gmail.com?subject=2017%20FLL%20Website" class="icon fa-envelope"><span class="label">GitHub</span></a>
-                </li>
-            </ul>
-        </nav>
-				<!-- CONTENT GOES HERE -->
-		<form action="">
-			<fieldset>
-				<ol>
-					<li>
-						<input type="radio" name="m01" value="Target 1" id="t1">
-						<label for="t1">Target 1</label>
-					</li>
-					<li>
-						<input type="radio" name="m01" value="Target 2" id="t2">
-						<label for="immigrant">Target 2</label>
-						<fieldset class="conditional">
-							<ol>
-								<li>
-									<label for="m01b">The shark is only touching the floor</label>
-									<input type="checkbox" id="m01b">
-								</li>
-								<li>
-									<label for="visa_type">Type of Visa</label>
-									<input type="text" id="visa_type">
-								</li>
-							</ol>
-						</fieldset>
-					</li>
-				</ol>
-			</fieldset>
-		</form>
-		<p>You can even nest them.</p>
-		<form action="">
-			<fieldset>
-				<ol>
-					<li>
-						<input type="checkbox" id="requirement-2" class="control">
-						<label for="requirement-2">Check me</label>
-						<fieldset class="conditional">
-							<ol>
-								<li>
-									<label for="option-2">Related subfield</label>
-									<input type="checkbox" id="option-2">
-									<fieldset class="conditional">
-										<ol>
-											<li>
-												<label for="country_citizenship">Country of Citizenship</label>
-												<input type="text" id="country_citizenship">
-											</li>
-											<li>
-												<label for="visa_type">Type of Visa</label>
-												<input type="text" id="visa_type">
-											</li>
-										</ol>
-									</fieldset>
-								</li>
-							</ol>
-						</fieldset>
-					</li>
-				</ol>
-			</fieldset>
-		</form>
-		<p>I haven't thought of a way to make this work with the <code>.conditional</code> in a different part of the form as it relies on an element being either a sibling or parent to be the control. </p>
-				
-					
+	<body>
+
+	<div class="form-div1">
+    <label>Select your profile</label>
+    <br />
+    <select id='user'>
+        <option value="option1">I'm a first-time user</option>
+        <option value="option2">I would like to renew or upgrade</option>
+    </select>
+</div>
+<div class="form-div2">
+    <label>SEN</label>
+    <br />
+    <input type "text" name="input1" class="input1" />
+</div>
+<div class="form-div3">
+    <label>Email Address</label>
+    <br>
+    <input type "text" name="input2" class="input2">
+</div>
+<div class="form-div4">
+    <label>Select your product</label>
+    <br>
+    <select id='product'>
+        <option value="option1">Product1</option>
+        <option value="option2">Other</option>
+    </select>
+</div>
+<div class="form-div42">
+    <label>Specify your product</label>
+    <br>
+    <input type "text" name="input2" class="input2">
+</div>
+<div class="form-div5">
+    <label>Select your license</label>
+    <br />
+    <select>
+        <option value="option1">25 users</option>
+        <option value="option2">50 users</option>
+    </select>
+</div>	
+	</body>
             <!-- Footer -->
             <footer id="footer">
                 <section>
