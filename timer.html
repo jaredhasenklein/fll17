@@ -66,7 +66,7 @@
 											  <center><img src="images/pic06.jpg" width="33%" alt="" /></center>
 								
 								
-	<p><strong><a href="https://drive.google.com/uc?export=download&amp;confirm=6v3J&amp;id=0B7KVTj--N5d4cmgyYWtOeW9ldjQ">Download for offline
+	<p><strong><a href="https://drive.google.com/uc?export=download&id=0B9Sjc_ZFlfrZNlo1OGRZNzdyVVk">Download for offline
 </a></strong>
 <br>
 
@@ -75,11 +75,11 @@
   <button onclick="makeBig()">Big</button>
   <button onclick="makeSmall()">Small</button>
   <button onclick="makeNormal()">Normal</button>
+  <button onclick="resetTime()">Restart</button>
   <br><br>
-  <video id="video1" width="420">
+  <video id="video1" width="560">
     <source src="https://drive.google.com/uc?export=download&id=0B9Sjc_ZFlfrZNlo1OGRZNzdyVVk" type="video/mp4">
-    <source src="mov_bbb.ogg" type="video/ogg">
-    Your browser does not support HTML5 video.
+    Your browser does not support HTML5 video. Please download using the link above.
   </video>
 </div> 
 
@@ -94,7 +94,7 @@ function playPause() {
 } 
 
 function makeBig() { 
-    myVideo.width = 560; 
+    myVideo.width = 660; 
 } 
 
 function makeSmall() { 
@@ -102,8 +102,15 @@ function makeSmall() {
 } 
 
 function makeNormal() { 
-    myVideo.width = 420; 
+    myVideo.width = 620; 
 } 
+
+function resetTime() { 
+    myVideo.pause();
+    myVideo.currentTime = 0;
+    myVideo.play();
+} 
+	
 </script> 
 
 		
