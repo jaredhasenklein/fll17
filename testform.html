@@ -18,21 +18,21 @@
 
 		<p>Test content 	</p>					
 							    <script>
-      function setFries(){
-        var m01b = document.getElementById("burger");
-        if(m01b.checked)
-          document.getElementById("fries").disabled = false;
+      function yesManhole(){
+        var m08 = document.getElementById("burger");
+        if(m08b.checked)
+          document.getElementById("m08b-y").disabled = false;
         else
-         document.getElementById("fries").disabled = true;    
+         document.getElementById("m08b-y").disabled = true;    
       }  
     </script>
 
 
 		<p>M08 - How many manhole covers are flipped?</p>
-<div><input type="radio" name="m01" id="m01-2" onchange="setFries();"/>2</div>
-<div id="yesManhole"><input type="checkbox" name="m01b" id="m01b-y" disabled="disabled"/>Both manholes on their targets?</div>
-<div><input type="radio" name="o1" id="pizza" onchange="setFries();"/>Pizza</div>
-<div><input type="radio" name="o1" id="hotdog" onchange="setFries();"/>Hot Dog</div>
+<div><input type="radio" name="m08" id="m08-0" onchange="yesManhole();"/>0</div>
+<div><input type="radio" name="m08" id="m08-1" onchange="yesManhole();"/>1</div>
+<div><input type="radio" name="m08" id="m08-2" onchange="yesManhole();"/>2</div>
+<div id="yesManhole"><input type="checkbox" name="m08b" id="m08b-y" disabled="disabled"/>Both manholes on their targets?</div>
 								
 
 								</section>
