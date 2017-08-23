@@ -85,7 +85,7 @@ label {
 <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbznp1ddCm1RAINW5kp738y8Qxn551D9phE2wNdSosqwZ7FaE98/exec">
 <p>Where should we email the results?</p>
 <div>
-  <input type="email" name="email" id="email" /></div>
+  <input type="email" name="email" id="email" required/></div>
 <p>M01 - Where is the pipe?</p>
 <div>
   <input type="radio" name="m01" id="m01-n" value="n" required checked/>Not In Base</div>
@@ -212,19 +212,20 @@ label {
 <br>
 <p>M18 - Was the water shown/faucet activated?</p>
 <div>
-  <input type="radio" name="m18" id="m18-n" value="n" recquired/>No</div>
+  <input type="radio" name="m18" id="m18-n" value="n" required checked/>No</div>
 <div>
   <input type="radio" name="m18" id="m18-y" value="y"/>Yes</div>
 <br>
 <p>Penalties</p>
 <div>
-  <input type="number" name="p01" min="0" max="6" value="0" required checked>
+  <input type="number" name="p01" min="0" max="6" value="0" required>
 </div>
+	<br>
 <button>Send</button>
 </form>
  <!-- Submit the Form to Google Using "AJAX" -->
     <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-<br>
+		<script> onsubmit="setTimeout(function(){window.location.reload();},10)" </script>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
