@@ -9,33 +9,223 @@
   ga('create', 'UA-102422339-1', 'auto');
   ga('send', 'pageview');
 </script>
-		<title>TEST FORM - FLL Resources</title>
+		<title>Timer - FLL Resources</title>
 		<meta charset="utf-8" />
-		<meta name="Description" content="test form -UPDATE ME LATER!!">
-   		<meta name="Keywords" content="UPDATE ME LATER"> 
-	</head>
+		<meta name="Description" content="2 minute and 30 second (2:30) timer for FIRST LEGO League (FLL) games with sounds and colors">
+   		<meta name="Keywords" content="Hydro Dynamics Hydrodynamics FLL FIRST LEGO League 2017 2018 Resources Scoring Calculator Score Scoresheet System Timer 2:30 230 2 minute clock stopwatch countdown"> 
+<style>    
+    body {
+    background-color: #34345c;
+    color: white;
+}
+    input[type=text] {
+    color: #34345c;
+    width: 10%;
+}
+    input[type=number] {
+    color: #34345b;
+    width: 10%;
+}
+    input[type=textarea] {
+    color: #34345b;
+    width: 10%;
+}
+    input[type=radio] {
+    color: #34345b;
+    font-family: Verdana;
+}
+p {
+    font-family: Verdana;
+}
+label {
+    font-family: Verdana;
+}
+    </style>	
+
+</head>
 	<body>
+								<!-- M08 Script -->
+<script>
+  function askM08b() {
+    var el = document.getElementById("m08-2");
+    if (el.checked)
+      document.getElementById("m08b-y").disabled = false;
+    else
+      document.getElementById("m08b-y").disabled = true;
+  }
 
-		<p>Test content 	</p>					
-							    <script>
-      function yesManhole(){
-        var m08 = document.getElementById("m08-2");
-        if(m08b.checked)
-          document.getElementById("m08b-y").disabled = false;
-        else
-         document.getElementById("m08b-y").disabled = true;    
-      }  
-    </script>
+</script>
 
+<!-- M16 Script -->
+<script>
+  function askM16b() {
+    var el = document.getElementById("m16-2");
+    var el1 = document.getElementById("m16-3");
+    if (el.checked || el1.checked)
+      document.getElementById("m16b-y").disabled = false;
+    else
+      document.getElementById("m16b-y").disabled = true;
+  }
 
-		<p>M08 - How many manhole covers are flipped?</p>
-<div><input type="radio" name="m08" id="m08-0" onchange="yesManhole();"/>0</div>
-<div><input type="radio" name="m08" id="m08-1" onchange="yesManhole();"/>1</div>
-<div><input type="radio" name="m08" id="m08-2" onchange="yesManhole();"/>2</div>
-<div id="yesManhole"><input type="checkbox" name="m08b" id="m08b-y" disabled="disabled"/>Both manholes on their targets?</div>
-								
+</script>
 
-								</section>
+<!-- M17 Script -->
+<script>
+  function askM17b() {
+    var el = document.getElementById("m17-y");
+    if (el.checked)
+      document.getElementById("m17b-y").disabled = false;
+    else
+      document.getElementById("m17b-y").disabled = true;
+  }
+
+</script>
+
+<!-- Form -->
+<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbznp1ddCm1RAINW5kp738y8Qxn551D9phE2wNdSosqwZ7FaE98/exec">
+<p>Where should we email the results?</p>
+<div>
+  <input type="email" name="email" id="email" /></div>
+<p>M01 - Where is the pipe?</p>
+<div>
+  <input type="radio" name="m01" id="m01-n" />Not In Base</div>
+<div>
+  <input type="radio" name="m01" id="m01-y" />In Base</div>
+<br>
+<p>M02 - Is the water on the other team's field?</p>
+<div>
+  <input type="radio" name="m02" id="m02-n" />No</div>
+<div>
+  <input type="radio" name="m02" id="m02-y" />Yes</div>
+<br>
+<p>M03 - Is the pump addition connected on target?</p>
+<div>
+  <input type="radio" name="m03" id="m03-n" />No</div>
+<div>
+  <input type="radio" name="m03" id="m03-y" />Yes</div>
+<br>
+<p>M04 - Did at least one rain fall from the cloud?</p>
+<div>
+  <input type="radio" name="m04" id="m04-n" />No</div>
+<div>
+  <input type="radio" name="m04" id="m04-y" />Yes</div>
+<br>
+<p>M05 - Was the latch dropped?</p>
+<div>
+  <input type="radio" name="m05" id="m05-n" />No</div>
+<div>
+  <input type="radio" name="m05" id="m05-y" />Yes</div>
+<br>
+<p>M06 - Is the water ejected?</p>
+<div>
+  <input type="radio" name="m06" id="m06-n" />No</div>
+<div>
+  <input type="radio" name="m06" id="m06-y" />Yes</div>
+<br>
+<p>M07 - Did the water rise?</p>
+<div>
+  <input type="radio" name="m07" id="m07-n" />No</div>
+<div>
+  <input type="radio" name="m07" id="m07-y" />Yes</div>
+<br>
+<p>M08 - How many manholes are flipped?</p>
+<div>
+  <input type="radio" name="m08" id="m08-0" onchange="askM08b();" />0</div>
+<div>
+  <input type="radio" name="m08" id="m08-1" onchange="askM08b();" />1</div>
+<div>
+  <input type="radio" name="m08" id="m08-2" onchange="askM08b();" />2</div>
+<div id="yesM08b">
+  <input type="checkbox" name="m08b" id="m08b-y" disabled="disabled" />Both manholes on target?</div>
+<br>
+<p>M09 - Where is the tripod?</p>
+<div>
+  <input type="radio" name="m09" id="m09-n" />Not inside the target</div>
+<div>
+  <input type="radio" name="m09" id="m09-p" />Partly inside the target</div>
+<div>
+  <input type="radio" name="m09" id="m09-f" />Fully inside the target</div>
+<br>
+<p>M10 - Is the pipe replaced?</p>
+<div>
+  <input type="radio" name="m10" id="m10-n" />No</div>
+<div>
+  <input type="radio" name="m10" id="m10-y" />Yes</div>
+<br>
+<p>M11 - Where is the pipe?</p>
+<div>
+  <input type="radio" name="m11" id="m11-n" />Not in</div>
+<div>
+  <input type="radio" name="m11" id="m11-p" />Partly in</div>
+<div>
+  <input type="radio" name="m11" id="m11-f" />Fully in</div>
+<br>
+<p>M12 - Is the sludge touching wood?</p>
+<div>
+  <input type="radio" name="m12" id="m12-n" />No</div>
+<div>
+  <input type="radio" name="m12" id="m12-y" />Yes</div>
+<br>
+<p>M13 - What's the condition of the flower?</p>
+<div>
+  <input type="radio" name="m13" id="m13-d" />Down (starting)</div>
+<div>
+  <input type="radio" name="m13" id="m13-u" />Up</div>
+<div>
+  <input type="radio" name="m13" id="m13-w" />Rain Water In</div>
+<br>
+<p>M14 - Where is the water well?</p>
+<div>
+  <input type="radio" name="m14" id="m14-n" />Not in</div>
+<div>
+  <input type="radio" name="m14" id="m14-p" />Partly in</div>
+<div>
+  <input type="radio" name="m14" id="m14-f" />Fully in</div>
+<br>
+<p>M15 - Was the fire lowered by the truck?</p>
+<div>
+  <input type="radio" name="m15" id="m15-n" />No</div>
+<div>
+  <input type="radio" name="m15" id="m15-y" />Yes</div>
+<br>
+<p>M16 - How many big waters were collected?</p>
+<div>
+  <input type="radio" name="m16" id="m169-0" onchange="askM16b();" />0</div>
+<div>
+  <input type="radio" name="m16" id="m16-1" onchange="askM16b();" />1</div>
+<div>
+  <input type="radio" class="b" name="m16" id="m16-2" onchange="askM16b();" />2</div>
+<div>
+  <input type="radio" class="b" name="m16" id="m16-3" onchange="askM16b();" />3</div>
+<div id="yesM16b">
+  <input type="checkbox" name="m16b" id="m16b-y" disabled="disabled" />Big waters stacked?</div>
+<div>
+  <input type="checkbox" name="m16c" id="m16c-y" />At least one rain?</div>
+<br>
+<p>M17 - Is the slingshot in target?</p>
+<div>
+  <input type="radio" name="m17" id="m17-n" onchange="askM17b();" />No</div>
+<div>
+  <input type="radio" name="m17" id="m17-y" onchange="askM17b();" />Yes</div>
+<div id="yesM17b">
+  <input type="checkbox" name="m17b" id="m17b-y" disabled="disabled" />Rain water in?</div>
+<br>
+<p>M18 - Was the water shown/faucet activated?</p>
+<div>
+  <input type="radio" name="m18" id="m18-n" />No</div>
+<div>
+  <input type="radio" name="m18" id="m18-y" />Yes</div>
+<br>
+<p>Penalties</p>
+<div>
+  <input type="number" name="p01" min="0" max="6">
+</div>
+<button>Send</button>
+</form>
+ <!-- Submit the Form to Google Using "AJAX" -->
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+<br>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
