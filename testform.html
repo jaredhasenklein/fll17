@@ -19,8 +19,8 @@
 		<p>Test content 	</p>					
 							    <script>
       function setFries(){
-        var el = document.getElementById("burger");
-        if(el.checked)
+        var m01b = document.getElementById("burger");
+        if(m01b.checked)
           document.getElementById("fries").disabled = false;
         else
          document.getElementById("fries").disabled = true;    
@@ -28,8 +28,9 @@
     </script>
 
 
-<div><input type="radio" name="o1" id="burger" onchange="setFries();"/>Burger</div>
-<div id="yesFries"><input type="checkbox" name="e1" id="fries" disabled="disabled"/>Fries with that?</div>
+		<p>M08 - How many manhole covers are flipped?</p>
+<div><input type="radio" name="m01" id="m01-2" onchange="setFries();"/>2</div>
+<div id="yesManhole"><input type="checkbox" name="m01b" id="m01b-y" disabled="disabled"/>Both manholes on their targets?</div>
 <div><input type="radio" name="o1" id="pizza" onchange="setFries();"/>Pizza</div>
 <div><input type="radio" name="o1" id="hotdog" onchange="setFries();"/>Hot Dog</div>
 								
