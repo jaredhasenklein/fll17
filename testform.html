@@ -66,7 +66,19 @@
 											  <center><img src="images/pic01.jpg" width="33%" alt="" /></center>
 								
 								
-	<p> Test content </p>
+	<p> Test content 
+								<form>
+<input type="checkbox" name="detailsgiven" onchange="toggleDisabled(this.checked)"/>
+<textarea name="details" id="tb1"></textarea>
+</form>
+
+<script>
+function toggleDisabled(_checked) {
+    document.getElementById('tb1').disabled = _checked ? true : false;
+}
+</script>
+								
+								</p>
 
 								</section>
 					</div>
