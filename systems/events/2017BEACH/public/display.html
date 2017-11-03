@@ -26,7 +26,27 @@
     Your browser does not support HTML5 video. Please download or use a supported browser.
                 </video>
                 <img src="http://fll16.jaredhk.com/tournamentimages/2016beach/botsrank.png" width="100%"></img>
-            </div>
+        <div id="myDIV">
+    <h3>Display instructions</h3>
+    <br><p>For best experience, do the following on the Google Sheet:
+    <br>Click View > Uncheck Formula Bar
+    <br>Click View > Full Screen (within Google Sheets)
+    <br>Click Dismiss
+    <br>
+    <br>Click outside of the frame (below the logo or timer - but not on)
+    <br>Press F11 or whatever your shortcut is for full screen in your broswer</p>
+</div>
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>    
+        </div>
 
 <script> 
 var myVideo = document.getElementById("video1"); 
@@ -45,26 +65,9 @@ function resetTime() {
         </div>
     </div>
 </div>
+<button onclick="myFunction()">Show/hide admin instructions</button>
 
-<p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
 
-<button onclick="myFunction()">Try it</button>
-
-<div id="myDIV">
-This is my DIV element.
-</div>
-
-<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
-<script>
-function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
-</script>
     </body>
 
 </html>
