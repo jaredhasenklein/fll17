@@ -1,0 +1,71 @@
+<html>
+<head>
+    <style>
+#myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: purple;
+    margin-top: 20px;
+}
+</style>
+    </head>
+    <body>
+    <div style="width: 100%; display: table;">
+    <div style="display: table-row">
+        <div style="width: 60%; display: table-cell;">
+            <iframe src="https://docs.google.com/spreadsheets/d/1KlccMSePHB8OdCFP2OoTdOO7EkJkndOu7Saw19BfCJ4/edit#gid=1869288187" width="90%" height="1000px">
+            </iframe>
+        </div>
+        <div style="display: table-cell; vertical-align:top;">
+            <div style="text-align:center;"> 
+                <button onclick="playPause()">Play/Pause</button> 
+                <button onclick="resetTime()">Reset Time</button>
+                <video id="video1" width="100%">
+                    <source src="https://drive.google.com/uc?export=download&id=0B9Sjc_ZFlfrZNlo1OGRZNzdyVVk" type="video/mp4">
+    Your browser does not support HTML5 video. Please download or use a supported browser.
+                </video>
+                <img src="http://fll16.jaredhk.com/tournamentimages/2016panth/displayranklogo.png" width="80%"></img>
+        <div id="myDIV">
+    <h3>Display instructions</h3>
+    <br><p>For best experience, do the following on the Google Sheet:
+    <br>*Click View > Uncheck Formula Bar
+    <br>*Click View > Full Screen (within Google Sheets)
+    <br>*Click Dismiss
+    <br>
+    <br>Then...
+    <br>*Click outside of the frame (below the logo or timer - but not on)
+    <br>*Press F11 or whatever your shortcut is for full screen in your broswer</p>
+</div> 
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>    
+        <button onclick="myFunction()">Show/hide admin instructions</button>
+        </div>
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+function resetTime() { 
+    myVideo.pause();
+    myVideo.currentTime = 0;
+}
+</script>
+
+        </div>
+    </div>
+        </div>
+    </body>
+</html>
