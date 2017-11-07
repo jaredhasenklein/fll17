@@ -92,8 +92,9 @@ label {
 <input type="number" name="team" min="1" required>
 <p>Ref</p>
 <input type="text" name="ref">
-<p>Round/Match</p>
-<input type="number" name="match" min="1">
+<div style="display:none;">
+	<p>Round/Match</p>
+	<input value="1" type="number" name="match" min="1"></div>
 <br><br>
 <p>M01 - Where is the pipe?</p>
 <div>
@@ -233,6 +234,7 @@ label {
 	<p style="color:red;" WARNING: You cannot edit once you click submit. Scores will publish instantly - review your responses.</p>
 <input type="submit" value="Submit">
 </form>
+	<!--IMAGE <div style="align:center;"><img src="/images/pauline.jpg" width="5%"></img></div> -->
  <!-- Submit the Form to Google Using "AJAX" -->
     <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 		<!-- Scripts -->
