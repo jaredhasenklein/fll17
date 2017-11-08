@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+								       <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-102422339-1', 'auto');
+  ga('send', 'pageview');
+</script>
+		<title>Demo Referee Form</title>
+		<meta charset="utf-8" />  
+		<style>
+    body {
+    background-color: #34345c;
+    color: white;
+}
+    input[type=text] {
+    color: #34345c;
+    width: 10%;
+}
+    input[type=number] {
+    color: #34345c;
+    width: 10%;
+}
+    input[type=textarea] {
+    color: #34345c;
+    width: 10%;
+}
+    input[type=radio] {
+    color: #34345c;
+    font-family: Verdana;
+}
+p {
+    font-family: Verdana;
+}
+label {
+    font-family: Verdana;
+}
+    </style>	
+
+</head>
+	<body>
+								<!-- M08 Script -->
+<script>
+  function askM08b() {
+    var el = document.getElementById("m08-2");
+    if (el.checked)
+      document.getElementById("m08b-y").disabled = false;
+    else
+      document.getElementById("m08b-y").disabled = true;
+  }
+</script>
+
+<!-- M16 Script -->
+<script>
+  function askM16b() {
+    var el = document.getElementById("m16-2");
+    var el1 = document.getElementById("m16-3");
+    if (el.checked || el1.checked)
+      document.getElementById("m16b-y").disabled = false;
+    else
+      document.getElementById("m16b-y").disabled = true;
+  }
+</script>
+
+<!-- M17 Script -->
+<script>
+  function askM17b() {
+    var el = document.getElementById("m17-y");
+    if (el.checked)
+      document.getElementById("m17b-y").disabled = false;
+    else
+      document.getElementById("m17b-y").disabled = true;
+  }
+</script>
+<center><h1 style="color:white;">Demo FLL Referee Form - <a href="http://fll17.jaredhk.com">fll17.jaredhk.com</a></h1>
+<h4 style="color:white;">Powered by <a href="http://fll17.jaredhk.com">Team 1836: The MilkenKnights</a><h4>
+<h6 style="color:white;">Day of event issues - Jared: Number Hidden on Demo</h6>
+	<h2 style="color:white;"><a href="http://fll17.jaredhk.com/systems/events/demo/form.html">Click here to start a new match</a></h2>
+	<!-- Form -->
+<form id="gform" method="POST" action="https://script.google.com/macros/s/yourkeyhere/exec">
+<!-- EMAIL FIELD - THIS SHOULD BE HIDDEN IN MOST SITUATIONS.
+		   DUMMY EMAIL IS FIRSTLEGOLEAGUE2016@GMAIL.COM
+		   USE THIS EMAIL TO AVOID BOUNCES AND DELAYS IN DATA. -->
+	<!-- <p>Where should we email the results?</p> -->
+<div style="display:none;"> <!-- Remove >> style="display:none;" << to show or add to hide email field. -->
+  <input type="email" name="email" value="firstlegoleague2016@gmail.com" id="email" required/></div>
+<!--end email-->
+<p>Team Number</p>
+<input type="number" name="team" min="1" required>
+<p>Ref</p>
+<input type="text" name="ref">
+<div style="display:none;">
+	<p>Round/Match</p>
+	<input value="1" type="number" name="match" min="1"></div>
+<br><br>
+<p>M01 - Where is the pipe?</p>
+<div>
+  <input type="radio" name="m01" id="m01-n" value="n" required checked/>Not In Base</div>
+<div>
+  <input type="radio" name="m01" id="m01-y" value="y"/>In Base</div>
+<br>
+<p>M02 - Is the water on the other team's field?</p>
+<div>
+  <input type="radio" name="m02" id="m02-n" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m02" id="m02-y" value="y"/>Yes</div>
+<br>
+<p>M03 - Is the pump addition connected on target?</p>
+<div>
+  <input type="radio" name="m03" id="m03-n" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m03" id="m03-y" value="y"/>Yes</div>
+<br>
+<p>M04 - Did at least one rain fall from the cloud?</p>
+<div>
+  <input type="radio" name="m04" id="m04-n" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m04" id="m04-y" value="y"/>Yes</div>
+<br>
+<p>M05 - Was the latch dropped?</p>
+<div>
+  <input type="radio" name="m05" id="m05-n" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m05" id="m05-y" value="y"/>Yes</div>
+<br>
+<p>M06 - Is the water ejected?</p>
+<div>
+  <input type="radio" name="m06" id="m06-n" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m06" id="m06-y" value="y"/>Yes</div>
+<br>
+<p>M07 - Did the water rise?</p>
+<div>
+  <input type="radio" name="m07" id="m07-n" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m07" id="m07-y" value="y"/>Yes</div>
+<br>
+<p>M08 - How many manholes are flipped?</p>
+<div>
+  <input type="radio" name="m08" id="m08-0" onchange="askM08b();" value="0" required checked/>0</div>
+<div>
+  <input type="radio" name="m08" id="m08-1" onchange="askM08b();" value="1"/>1</div>
+<div>
+  <input type="radio" name="m08" id="m08-2" onchange="askM08b();" value="2"/>2</div>
+<div id="yesM08b">
+  <input type="checkbox" name="m08b" id="m08b-y" disabled="disabled" value="y"/>Both manholes on target?</div>
+<br>
+<p>M09 - Where is the tripod?</p>
+<div>
+  <input type="radio" name="m09" id="m09-n" value="n" required checked/>Not inside the target</div>
+<div>
+  <input type="radio" name="m09" id="m09-p" value="p"/>Partly inside the target</div>
+<div>
+  <input type="radio" name="m09" id="m09-f" value="f"/>Fully inside the target</div>
+<br>
+<p>M10 - Is the pipe replaced?</p>
+<div>
+  <input type="radio" name="m10" id="m10-n" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m10" id="m10-y" value="y"/>Yes</div>
+<br>
+<p>M11 - Where is the pipe?</p>
+<div>
+  <input type="radio" name="m11" id="m11-n" value="n" required checked/>Not in</div>
+<div>
+  <input type="radio" name="m11" id="m11-p" value="p"/>Partly in</div>
+<div>
+  <input type="radio" name="m11" id="m11-f" value="f"/>Fully in</div>
+<br>
+<p>M12 - Is the sludge touching wood?</p>
+<div>
+  <input type="radio" name="m12" id="m12-n" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m12" id="m12-y" value="y"/>Yes</div>
+<br>
+<p>M13 - What's the condition of the flower?</p>
+<div>
+  <input type="radio" name="m13" id="m13-d" value="d" required checked/>Down (starting)</div>
+<div>
+  <input type="radio" name="m13" id="m13-u" value="u"/>Up</div>
+<div>
+  <input type="radio" name="m13" id="m13-w" value="w"/>Rain Water In</div>
+<br>
+<p>M14 - Where is the water well?</p>
+<div>
+  <input type="radio" name="m14" id="m14-n" value="n" required checked/>Not in</div>
+<div>
+  <input type="radio" name="m14" id="m14-p" value="p"/>Partly in</div>
+<div>
+  <input type="radio" name="m14" id="m14-f" value="f"/>Fully in</div>
+<br>
+<p>M15 - Was the fire lowered by the truck?</p>
+<div>
+  <input type="radio" name="m15" id="m15-n" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m15" id="m15-y" value="y"/>Yes</div>
+<br>
+<p>M16 - How many big waters were collected?</p>
+<div>
+  <input type="radio" name="m16" id="m169-0" onchange="askM16b();" value="0" required checked/>0</div>
+<div>
+  <input type="radio" name="m16" id="m16-1" onchange="askM16b();" value="1"/>1</div>
+<div>
+  <input type="radio" class="b" name="m16" id="m16-2" onchange="askM16b();" value="2"/>2</div>
+<div>
+  <input type="radio" class="b" name="m16" id="m16-3" onchange="askM16b();" value="3"/>3</div>
+<div id="yesM16b">
+  <input type="checkbox" name="m16b" id="m16b-y" disabled="disabled" value="y"/>Big waters stacked?</div>
+<div>
+  <input type="checkbox" name="m16c" id="m16c-y" value="y"/>At least one rain?</div>
+<br>
+<p>M17 - Is the slingshot in target?</p>
+<div>
+  <input type="radio" name="m17" id="m17-n" onchange="askM17b();" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m17" id="m17-y" onchange="askM17b();" value="y"/>Yes</div>
+<div id="yesM17b">
+  <input type="checkbox" name="m17b" id="m17b-y" disabled="disabled" value="y"/>Rain water in?</div>
+<br>
+<p>M18 - Was the water shown/faucet activated?</p>
+<div>
+  <input type="radio" name="m18" id="m18-n" value="n" required checked/>No</div>
+<div>
+  <input type="radio" name="m18" id="m18-y" value="y"/>Yes</div>
+<br>
+<p>Penalties</p>
+<div>
+  <input type="number" name="p01" min="0" max="6" value="0" required>
+</div>
+	<br>
+<div><h2>NOTE: You cannot submit the demo form.</h2></div>
+<input type="submit" value="Submit">
+</form>
+	<!--Image <div style="align:center;"><img src="/images/pauline.jpg" width="5%"></img></div> -->
+ <!-- Submit the Form to Google Using "AJAX" -->
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>						       
+	</body>
+</html>
